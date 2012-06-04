@@ -1,0 +1,16 @@
+%h1 Ember Examples
+
+%p Small examples that I wrote to learn #{link_to "Ember.js", "http://emberjs.com/"} and integrate it with other libraries. 
+
+.well
+  %h3= link_to "Selectable Rows", selectable_rows_path
+  %p In this example we render a table with many rows. You can select the rows and perform an action. 
+
+.well
+  %h3= link_to "SlickGrid Integration", slickgrid_path
+  %p This example integrates Ember.js with #{link_to "SlickGrid", "https://github.com/mleibman/SlickGrid"}. The grid's data is populated with JSON from the server. All paging, sorting and filtering is done on the server side. 
+
+
+.well
+  %h3= link_to "JQueryUI autocomplete Integration", artists_path
+  %p This example integrates Ember with JqueryUI's #{link_to "autocomplete", "http://jqueryui.com/demos/autocomplete/"} plugin. It also uses #{link_to "EmberResource", "https://github.com/staugaard/ember-resource"} to load and perform updates on the selected record. 

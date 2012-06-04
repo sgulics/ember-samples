@@ -1,0 +1,33 @@
+- content_for :head do
+  = javascript_include_tag "typeahead"
+
+
+%h2 JQueryUI autocomplete Integration
+%p Start typing in the box below to find a specific artist 
+
+#app
+  :handlebars
+    {{view Typeahead.SearchArtistView id="search-artist" placeholder="Type in Artist" }}
+
+    {{#view Typeahead.ArtistView id="show-artist" class="well" }}
+      Name: {{content.name}}
+      <a href="#" {{action "edit" on="click"}}>Edit</a>
+      <br/>
+      {{#collection contentBinding="content.albums" tagName="ul" }}
+        {{content.name}}
+      {{/collection}}
+
+    {{/view}}
+
+    {{#view Typeahead.EditArtistView id="edit-artist" style="display:none;" class="well" }}
+      Name: {{view Ember.TextField valueBinding="content.name" propagatesEvents=false}}
+      
+      <a href="#" {{action "cancel" on="click"}}>Cancel</a>
+    {{/view}}
+
+
+
+
+    
+
+

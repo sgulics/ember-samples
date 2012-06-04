@@ -1,0 +1,15 @@
+- content_for :head do
+  = javascript_include_tag "examples-selectable-rows"
+
+:javascript
+  Todos.todosController.initializeTodos(#{@todos.to_json})
+
+
+
+%h1 Selectable Rows
+%p In this example we render a table with many rows. Rows can be selected by clicking on them. Hold the shift, control, or Apple command key to select multiple rowss
+
+#app
+  :handlebars
+    {{ view Todos.ListTodosView }}
+

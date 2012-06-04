@@ -1,0 +1,36 @@
+// Place all the styles related to the examples controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+table#selectable-rows-table {
+    margin: 10px 0 2px 0;
+
+    tr {
+      padding: 5px;
+    }
+
+    td {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #F7F7F7;
+    }
+
+    tr.hover {
+      background-color: #ccc !important;
+    }
+
+    tr.selected {
+      background-color: green !important;
+    }
+
+
+}
+
+

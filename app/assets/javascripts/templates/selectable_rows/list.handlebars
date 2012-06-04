@@ -1,0 +1,14 @@
+<table id="selectable-rows-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each todos}}
+    {{view Todos.ShowTodoView todoBinding="this"}}
+  {{/each}}
+  
+  </tbody>
+</table>
